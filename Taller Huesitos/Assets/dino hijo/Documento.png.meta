@@ -32,6 +32,21 @@ TextureImporter:
   - first:
       213: -453954994432249057
     second: Documento_9
+  - first:
+      213: 7015799523380211763
+    second: Documento_10
+  - first:
+      213: -2047674884909550868
+    second: Documento_11
+  - first:
+      213: 376874892718276810
+    second: Documento_12
+  - first:
+      213: -7962130169397553628
+    second: Documento_13
+  - first:
+      213: -35056907615460950
+    second: Documento_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,20 +145,20 @@ TextureImporter:
       name: Documento_0
       rect:
         serializedVersion: 2
-        x: 545
-        y: 552
-        width: 272
-        height: 190
+        x: 533
+        y: 513
+        width: 274
+        height: 198
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8a886f6893d917a429d752968ad8ef68
-      internalID: -1941868277
+      spriteID: c067c3d14427d8d10800000000000000
+      internalID: 2129483835689956876
       vertices: []
       indices: 
       edges: []
@@ -152,130 +167,20 @@ TextureImporter:
       name: Documento_1
       rect:
         serializedVersion: 2
-        x: 855
-        y: 621
-        width: 291
-        height: 180
+        x: 843
+        y: 515
+        width: 313
+        height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 43b8bd72ea1fda043a99cffde6f8d0f8
-      internalID: 1372942403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Documento_2
-      rect:
-        serializedVersion: 2
-        x: 947
-        y: 580
-        width: 54
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c47041ca70ca88a44b39ea69a7d68c01
-      internalID: -6311687262893829217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Documento_3
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 583
-        width: 48
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4a311b50a450fc4fbe0c211481f69a8
-      internalID: 6119328436922818077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Documento_4
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 357
-        width: 494
-        height: 194
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59395ec14ffe1da4bb905b5ca7233361
-      internalID: 1388638632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Documento_5
-      rect:
-        serializedVersion: 2
-        x: 914
-        y: 347
-        width: 327
-        height: 226
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e913a97bb7579e24dafc5473355eb437
-      internalID: -4976713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Documento_6
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 120
-        width: 304
-        height: 183
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2cfd12f3c3ffb5479088cf718acda22
-      internalID: 1430183696
+      spriteID: 0c66daddc8c506f60800000000000000
+      internalID: 8025516296058529472
       vertices: []
       indices: 
       edges: []
@@ -284,20 +189,20 @@ TextureImporter:
       name: Documento_7
       rect:
         serializedVersion: 2
-        x: 394
-        y: 119
-        width: 263
-        height: 183
+        x: 388
+        y: 323
+        width: 489
+        height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 100f149ad37de2b459149a7199c5ddc7
-      internalID: -899394760
+      spriteID: 4a2bb81ab718d1cb0800000000000000
+      internalID: -4891611252263243100
       vertices: []
       indices: 
       edges: []
@@ -306,42 +211,108 @@ TextureImporter:
       name: Documento_8
       rect:
         serializedVersion: 2
-        x: 666
-        y: 117
-        width: 264
-        height: 187
+        x: 917
+        y: 340
+        width: 314
+        height: 163
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 848c3827d29ab6341829c6228068a2e0
-      internalID: 37999048
+      spriteID: b8ffbf6659bab3b20800000000000000
+      internalID: 3115272225423097739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Documento_9
+      name: Documento_11
       rect:
         serializedVersion: 2
-        x: 960
-        y: 121
-        width: 269
-        height: 182
+        x: 49
+        y: 86
+        width: 306
+        height: 186
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 955803a4dcef7f24b8d9035d8e9e4525
-      internalID: -1140308177
+      spriteID: ce23a7d8a823593e0800000000000000
+      internalID: -2047674884909550868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Documento_12
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 85
+        width: 265
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac08c39d7bdea3500800000000000000
+      internalID: 376874892718276810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Documento_13
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 83
+        width: 266
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42653adcbc4d08190800000000000000
+      internalID: -7962130169397553628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Documento_14
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 87
+        width: 271
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa128a2ade3738ff0800000000000000
+      internalID: -35056907615460950
       vertices: []
       indices: 
       edges: []
@@ -350,7 +321,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c98697e1afae54344a9b5f8ddc7e8566
+    spriteID: cb5ed728c50fed941b5e80bf6d297199
     internalID: 0
     vertices: []
     indices: 
@@ -358,22 +329,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":1.0,"y":1.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: True
+      entries: []
     nameFileIdTable:
-      Documento_0: -1941868277
-      Documento_1: 1372942403
+      Documento_0: 2129483835689956876
+      Documento_1: 8025516296058529472
+      Documento_10: 7015799523380211763
+      Documento_11: -2047674884909550868
+      Documento_12: 376874892718276810
+      Documento_13: -7962130169397553628
+      Documento_14: -35056907615460950
       Documento_2: -6311687262893829217
       Documento_3: 6119328436922818077
-      Documento_4: 1388638632
-      Documento_5: -4976713
-      Documento_6: 1430183696
-      Documento_7: -899394760
-      Documento_8: 37999048
-      Documento_9: -1140308177
+      Documento_4: 5811993812008741328
+      Documento_5: 5369202265159668972
+      Documento_6: -6387917348999157260
+      Documento_7: -4891611252263243100
+      Documento_8: 3115272225423097739
+      Documento_9: -453954994432249057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
