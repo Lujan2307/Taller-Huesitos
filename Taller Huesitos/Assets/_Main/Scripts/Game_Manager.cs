@@ -2,33 +2,44 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
- 
-    public static Game_Manager instance;
+    [SerializeField] private int Vida = 3;
+    [SerializeField] private Player_Controller Jugador;
+    [SerializeField] private UIManager UI_manager;
+    [SerializeField] private bool tieneCarne = false;
 
-    public int vida = 10;
-    public int huesos = 0;
-    public bool carneRecogida = false;
-
-    void Awake()
+    void Start()
     {
-        instance = this;
+        UI_manager.ActualizarVida(Vida);
     }
 
-    public void RecibirDaño(int daño)
+    public void RestarVida(int daño)
     {
-        vida -= daño;
-        print("Vida: " + vida);
+        if (Vida <= 0) return;
 
-        if (vida <= 0)
+        Vida -= daño;
+
+        // ❤️ Actualizar corazones
+        UI_manager.ActualizarVida(Vida);
+
+        print("Daño recibido: " + daño);
+
+        if (Vida <= 0)
         {
-            print("Game Over");
+            Destroy(Jugador.gameObject);
+            print("GAME OVER");
         }
     }
 
-    public void SumarHueso()
-    {
-        huesos++;
-        print("Huesos: " + huesos);
-    }
+    public void ObtenerCarne()
+{
+    tieneCarne = true;
+    print("Carne sagrada obtenida 🥩");
+}
+
+public bool TieneCarne()
+{
+    return tieneCarne;
+}
 }
     
+//> <

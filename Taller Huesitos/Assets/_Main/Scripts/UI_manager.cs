@@ -1,15 +1,37 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public Slider barraVida;
-    public TMP_Text textoHuesos;
+    [Header("❤️ Corazones")]
+    [SerializeField] private Image[] corazones;
 
-    void Update()
+    [Header("🦴 Texto huesos")]
+    [SerializeField] private TMP_Text Text_Score;
+
+    // ❤️ VIDA
+    public void ActualizarVida(int vida)
     {
-        barraVida.value = Game_Manager.instance.vida;
-        textoHuesos.text = "Huesos: " + Game_Manager.instance.huesos;
+        for (int i = 0; i < corazones.Length; i++)
+        {
+            if (i < vida)
+            {
+                corazones[i].enabled = true;
+            }
+            else
+            {
+                corazones[i].enabled = false;
+            }
+        }
+    }
+
+    // 🦴 HUESOS
+    public void ActualizarHuesos(int cantidad)
+    {
+        if (Text_Score != null)
+        {
+            Text_Score.text = "Huesos: " + cantidad;
+        }
     }
 }

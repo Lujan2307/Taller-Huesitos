@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class Player_Controller : MonoBehaviour
 {
-    public float velocidad = 5f;
-    public float fuerzaSalto = 7f;
+    [Header("Movimiento")]
+    [SerializeField] private float velocidad = 5f;
+    [SerializeField] private float fuerzaSalto = 7f;
 
-    private Rigidbody2D rb;
-    private bool Suelo;
+    [Header("Referencias")]
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Game_Manager gameManager;
+
+    [Header("Estado")]
+    [SerializeField] private bool Suelo;
     private float movimientoX;
 
     void Start()
@@ -16,12 +21,12 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
-        // Movimiento lateral
         movimientoX = Input.GetAxis("Horizontal");
 
         // Salto
         if (Input.GetKeyDown(KeyCode.Space) && Suelo)
         {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // evita saltos acumulados
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
     }
@@ -36,6 +41,12 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Suelo"))
         {
             Suelo = true;
+        }
+
+        // 🔥 EJEMPLO DE DAÑO
+        if (collision.gameObject.CompareTag("Enemigo"))
+        {
+            gameManager.RestarVida(10);
         }
     }
 

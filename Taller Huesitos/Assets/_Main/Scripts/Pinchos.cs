@@ -1,21 +1,15 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pinchos : MonoBehaviour
 {
-    public int daño = 0;
+    [SerializeField] private int daño = 1;
+    [SerializeField] private Game_Manager gameManager;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-    
         if (collision.gameObject.CompareTag("Player"))
         {
-            //collision.gameObject.GetComponent<Vida>().RecibirDaño(daño);
-
+            gameManager.RestarVida(daño);
         }
-            
-    
-    } 
-
-
-}  
+    }
+}

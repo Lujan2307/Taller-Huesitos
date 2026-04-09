@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class Huesitos : MonoBehaviour
+public class CarneSagrada : MonoBehaviour
 {
-    [SerializeField] private int valor = 1;
+    [SerializeField] private Puerta puerta;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Contador_Huesos.instance.SumarHuesos();
-            print("+1 hueso");
-
+            puerta.DesbloquearPuerta();
             Destroy(gameObject);
         }
     }

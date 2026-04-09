@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Contador_Huesos : MonoBehaviour
 {
+    public static Contador_Huesos instance;
 
-   public static Contador_Huesos instance;
     public int huesos = 0;
+
+    [SerializeField] private UIManager uiManager;
 
     void Awake()
     {
@@ -12,14 +14,18 @@ public class Contador_Huesos : MonoBehaviour
         {
             instance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SumarHuesos()
     {
-        huesos ++;
-        print("huesos: " + huesos);;
+        huesos++;
+        print("huesos: " + huesos);
 
+        // 🔥 ACTUALIZA UI
+        uiManager.ActualizarHuesos(huesos);
     }
-
-
 }
