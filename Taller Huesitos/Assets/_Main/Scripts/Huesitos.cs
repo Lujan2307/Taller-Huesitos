@@ -3,15 +3,19 @@ using UnityEngine;
 public class Huesitos : MonoBehaviour
 {
     [SerializeField] private int valor = 1;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] private Game_Manager game_Manager;
+    void Start()
     {
-        if (collision.CompareTag("Player"))
-        {
-            Contador_Huesos.instance.SumarHuesos();
-            print("+1 hueso");
+        
+        game_Manager = FindObjectOfType<Game_Manager>();
+    }
 
-            Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            game_Manager.SumarHueso(1); 
+            Destroy(gameObject); 
         }
     }
 }

@@ -2,30 +2,41 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
-    [SerializeField] private int Vida = 3;
-    [SerializeField] private Player_Controller Jugador;
-    [SerializeField] private UIManager UI_manager;
+    [SerializeField] private int vida = 3;
+    [SerializeField] private Player_Controller jugador;
+    [SerializeField] private UIManager ui_manager;
     [SerializeField] private bool tieneCarne = false;
+    [SerializeField] private int sumarHuesos = 0;   
 
     void Start()
     {
-        UI_manager.ActualizarVida(Vida);
+        ui_manager.ActualizarVida(vida);
     }
 
-    public void RestarVida(int daño)
+    public void SumarHueso(int Cantidad)
     {
-        if (Vida <= 0) return;
+        sumarHuesos += Cantidad;
+        Debug.Log("Huesos: " + sumarHuesos);
 
-        Vida -= daño;
+        // Opcional: actualizar UI
+        ui_manager.ActualizarHuesos(sumarHuesos);
+    }
+
+    public void RestarVida(int cantidad_daño)
+    {
+
+        if (vida <= 0) return;
+
+        vida -= cantidad_daño;
 
         // ❤️ Actualizar corazones
-        UI_manager.ActualizarVida(Vida);
+        ui_manager.ActualizarVida(vida);
 
-        print("Daño recibido: " + daño);
+        print("Daño recibido: " + cantidad_daño);
 
-        if (Vida <= 0)
+        if (vida <= 0)
         {
-            Destroy(Jugador.gameObject);
+            Destroy(jugador.gameObject);
             print("GAME OVER");
         }
     }
@@ -33,7 +44,7 @@ public class Game_Manager : MonoBehaviour
     public void ObtenerCarne()
 {
     tieneCarne = true;
-    print("Carne sagrada obtenida 🥩");
+    print("Carne sagrada obtenida ");
 }
 
 public bool TieneCarne()

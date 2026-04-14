@@ -46,7 +46,7 @@ public class Player_Controller : MonoBehaviour
         // 🔥 EJEMPLO DE DAÑO
         if (collision.gameObject.CompareTag("Enemigo"))
         {
-            gameManager.RestarVida(10);
+            gameManager.RestarVida(1);
         }
     }
 
