@@ -1,18 +1,29 @@
 using UnityEngine;
+using TMPro;
 
 public class Puerta : MonoBehaviour
 {
-    private Collider2D col;
+    public Game_Manager gameManager;
+    public Flores flores;
+    public GameObject jugador;
+    public TextMeshProUGUI textoWin;
 
-    void Start()
-    {
-        col = GetComponent<Collider2D>();
-        col.isTrigger = false; // bloqueada al inicio
-    }
+    private bool activada = false;
 
-    public void DesbloquearPuerta()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        col.isTrigger = true;
-        print("Puerta desbloqueada 🚪");
+        if (other.CompareTag("Player") && gameManager.TieneCarne())
+        {
+            if (!activada)
+            {
+                flores.ActivarFlores();
+
+                jugador.SetActive(false); // desaparece jugador
+                Debug.Log("Activando WIN");
+                textoWin.gameObject.SetActive(true); // aparece WIN
+
+                activada = true;
+            }
+        }
     }
 }

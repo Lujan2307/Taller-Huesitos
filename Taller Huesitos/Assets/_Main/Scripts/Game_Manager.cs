@@ -6,7 +6,7 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private Player_Controller jugador;
     [SerializeField] private UIManager ui_manager;
     [SerializeField] private bool tieneCarne = false;
-    [SerializeField] private int sumarHuesos = 0;   
+    [SerializeField] private int sumarHuesos = 1;   
 
     void Start()
     {

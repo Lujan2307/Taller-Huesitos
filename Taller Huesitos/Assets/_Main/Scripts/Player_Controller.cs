@@ -10,6 +10,9 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Game_Manager gameManager;
 
+    [Header("Sonido")]
+    [SerializeField] private AudioSource audioPasos;
+
     [Header("Estado")]
     [SerializeField] private bool Suelo;
     private float movimientoX;
@@ -23,10 +26,23 @@ public class Player_Controller : MonoBehaviour
     {
         movimientoX = Input.GetAxis("Horizontal");
 
+        // 🔊 SONIDO DE PASOS
+        if (movimientoX != 0 && Suelo)
+        {
+            if (!audioPasos.isPlaying)
+            {
+                audioPasos.Play();
+            }
+        }
+        else
+        {
+            audioPasos.Stop();
+        }
+
         // Salto
         if (Input.GetKeyDown(KeyCode.Space) && Suelo)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // evita saltos acumulados
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
     }
@@ -43,10 +59,9 @@ public class Player_Controller : MonoBehaviour
             Suelo = true;
         }
 
-        // 🔥 EJEMPLO DE DAÑO
         if (collision.gameObject.CompareTag("Enemigo"))
         {
-            gameManager.RestarVida(1);
+            gameManager.RestarVida(0);
         }
     }
 

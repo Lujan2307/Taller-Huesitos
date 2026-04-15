@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class CarneSagrada : MonoBehaviour
+public class Carne : MonoBehaviour
 {
-    [SerializeField] private Puerta puerta;
+    public Game_Manager gameManager;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            puerta.DesbloquearPuerta();
+            gameManager.ObtenerCarne();
             Destroy(gameObject);
         }
     }
