@@ -14,7 +14,7 @@ public class Heal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
+            print("SI CURA"); 
             //  Solo curar si no está lleno
             if (!gameManager.EstaVidaLlena())
             {
