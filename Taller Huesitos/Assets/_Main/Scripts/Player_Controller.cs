@@ -5,11 +5,14 @@ public class Player_Controller : MonoBehaviour
     [Header("Movimiento")]
     [SerializeField] private float velocidad = 5f;
     [SerializeField] private float fuerzaSalto = 7f;
-
+    
+    
     [Header("Referencias")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Game_Manager gameManager;
-
+    [SerializeField] Animator animator;
+    private const string STRING_VELOCIDAD_HORIZONTAL = "velocidadhorizontal";
+     private const string STRING_EN_SUELO = "Elsuelo";
     [Header("Visual")]
     [SerializeField] private Transform visual; // 👈 hijo que contiene el sprite
 
@@ -69,6 +72,7 @@ public class Player_Controller : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(movimientoX * velocidad, rb.linearVelocity.y);
+        ControlarAnimaciones();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -84,6 +88,11 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
+        private void ControlarAnimaciones()
+        {
+         animator.SetFloat(STRING_VELOCIDAD_HORIZONTAL, Mathf.Abs(rb.linearVelocity.x));
+         animator.SetBool(STRING_EN_SUELO, Suelo);
+        }
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Suelo"))
