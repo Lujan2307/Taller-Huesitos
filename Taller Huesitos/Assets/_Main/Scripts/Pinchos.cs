@@ -24,10 +24,10 @@ public class Pinchos : MonoBehaviour
     {
         puedeHacerDaño = false;
 
-        // 🔊 Sonido de daño en la posición del jugador
+        //  Sonido de daño en la posición del jugador
         AudioSource.PlayClipAtPoint(sonidoDaño, playerTransform.position, volumen);
 
-        // 💔 Aplicar daño
+        //  Aplicar daño
         gameManager.RestarVida(daño);
 
         yield return new WaitForSeconds(0.5f);

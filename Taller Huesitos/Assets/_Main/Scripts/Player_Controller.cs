@@ -6,16 +6,15 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private float velocidad = 5f;
     [SerializeField] private float fuerzaSalto = 7f;
     
-    
     [Header("Referencias")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Game_Manager gameManager;
     [SerializeField] Animator animator;
     private const string STRING_VELOCIDAD_HORIZONTAL = "velocidadhorizontal";
-     private const string STRING_EN_SUELO = "Elsuelo";
-    [Header("Visual")]
-    [SerializeField] private Transform visual; // 👈 hijo que contiene el sprite
+    private const string STRING_EN_SUELO = "Elsuelo";
 
+    [Header("Visual")]
+    [SerializeField] private Transform visual; 
     [Header("Sonido")]
     [SerializeField] private AudioSource audioPasos;
 
@@ -36,10 +35,10 @@ public class Player_Controller : MonoBehaviour
     {
         movimientoX = Input.GetAxis("Horizontal");
 
-        // 🔊 SONIDO DE PASOS
+        
         if (movimientoX != 0 && Suelo)
         {
-            if (!audioPasos.isPlaying)
+            if (!audioPasos.isPlaying) //Sonido de pasos
             {
                 audioPasos.Play();
             }
@@ -49,17 +48,17 @@ public class Player_Controller : MonoBehaviour
             audioPasos.Stop();
         }
 
-        // 🔄 GIRAR PERSONAJE (SOLO VISUAL)
+        
         if (movimientoX != 0)
 {
     Vector3 escalaActual = visual.localScale;
 
-    escalaActual.x = Mathf.Abs(escalaActual.x) * (movimientoX > 0 ? 1 : -1);
+    escalaActual.x = Mathf.Abs(escalaActual.x) * (movimientoX > 0 ? 1 : -1); //Gira Visualmwnte el jugador sin modificar su escala
 
     visual.localScale = escalaActual;
 }
 
-        // ⬆️ SALTO
+        //  SALTO
         if (Input.GetKeyDown(KeyCode.Space) && Suelo)
         {
             AudioSource.PlayClipAtPoint(sonidoSalto, Camera.main.transform.position, volumenSalto);

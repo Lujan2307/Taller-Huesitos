@@ -24,22 +24,21 @@ public class Puerta : MonoBehaviour
             {
                 activada = true;
 
-                // 🌸 Activar flores
+                //  Activa flores
                 flores.ActivarFlores();
 
-                // ⛔ Detener música
+                //  Detiene la música
                 if (musicaFondo != null)
                 {
                     musicaFondo.Stop();
                 }
 
-                // 🔊 Sonido de puerta (antes de desactivar jugador)
                 AudioSource.PlayClipAtPoint(sonidoPuerta, Camera.main.transform.position, volumen);
 
-                // 👤 Desactivar jugador
+                //  Desactivar jugador
                 jugador.SetActive(false);
 
-                // 🏆 Mostrar WIN
+                //  Mostrar WIN
                 Debug.Log("Activando WIN");
                 textoWin.gameObject.SetActive(true);
             }

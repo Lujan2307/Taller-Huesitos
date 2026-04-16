@@ -4,13 +4,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("❤️ Corazones")]
+    [Header(" Corazones")]
     [SerializeField] private Image[] corazones;
 
-    [Header("🦴 Texto huesos")]
+    [Header(" Texto huesos")]
     [SerializeField] private TMP_Text Text_Score;
 
-    // ❤️ VIDA
     public void ActualizarVida(int vida)
     {
         for (int i = 0; i < corazones.Length; i++)
@@ -26,7 +25,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // 🦴 HUESOS
     public void ActualizarHuesos(int cantidad)
     {
         if (Text_Score != null)

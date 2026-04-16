@@ -4,7 +4,7 @@ public class Flores : MonoBehaviour
 {
     public void ActivarFlores()
     {
-    Debug.Log("Flores activadas");
+    print("Flores activadas");
     gameObject.SetActive(true);
     }
 

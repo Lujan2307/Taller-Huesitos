@@ -21,12 +21,12 @@ public class Game_Manager : MonoBehaviour
 
     void Start()
     {
-        // Inicializar UI
+        // Inicia el Ui para la vida y huesos actuales
         ui_manager.ActualizarVida(vida);
         ui_manager.ActualizarHuesos(sumarHuesos);
     }
 
-    // 🦴 HUESOS
+    
     public void SumarHueso(int cantidad)
     {
         sumarHuesos += cantidad;
@@ -35,7 +35,7 @@ public class Game_Manager : MonoBehaviour
         ui_manager.ActualizarHuesos(sumarHuesos);
     }
 
-    // 💔 DAÑO
+    
     public void RestarVida(int cantidad_daño)
     {
         if (vida <= 0) return;
@@ -47,27 +47,26 @@ public class Game_Manager : MonoBehaviour
 
         ui_manager.ActualizarVida(vida);
 
-        Debug.Log("Daño recibido: " + cantidad_daño);
+        print("Daño recibido: " + cantidad_daño);
 
         if (vida <= 0)
         {
-            // ⛔ Detener música
+            // Detiene la música de fondo (Si existe)
             if (musicaFondo != null)
             {
                 musicaFondo.Stop();
             }
 
-            // 🔊 Sonido de muerte
+            //  Sonido de muerte
             AudioSource.PlayClipAtPoint(sonidoMuerte, Camera.main.transform.position, volumenMuerte);
 
-            // 👤 Destruir jugador (opcional delay)
             Destroy(jugador.gameObject);
 
-            Debug.Log("Jugador eliminado");
+            print("Jugador eliminado");
         }
     }
 
-    // ❤️ CURACIÓN
+    // curación
     public void SumarVida(int cantidad)
     {
         if (vida >= vidaMaxima) return;
@@ -82,13 +81,13 @@ public class Game_Manager : MonoBehaviour
         Debug.Log("Vida curada: " + cantidad);
     }
 
-    // ❓ VIDA LLENA
+    // Vida llena
     public bool EstaVidaLlena()
     {
         return vida >= vidaMaxima;
     }
 
-    // 🍖 CARNE
+    // Carne sagrada
     public void ObtenerCarne()
     {
         tieneCarne = true;

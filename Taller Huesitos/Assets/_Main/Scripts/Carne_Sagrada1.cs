@@ -13,13 +13,13 @@ public class Carne : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // 🔊 Sonido
+            //  Sonido
             AudioSource.PlayClipAtPoint(sonidoPickup, transform.position, volumen);
 
-            // 🍖 Lógica del item
+         
             gameManager.ObtenerCarne();
 
-            // ❌ Destruir objeto
+            //  Destruir objeto
             Destroy(gameObject);
         }
     }

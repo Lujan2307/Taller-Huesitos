@@ -15,16 +15,16 @@ public class Heal : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-            // 🧠 Solo curar si no está lleno
+            //  Solo curar si no está lleno
             if (!gameManager.EstaVidaLlena())
             {
-                // ❤️ Curar
+                //  Curar
                 gameManager.SumarVida(cura);
 
-                // 🔊 Sonido
+                //  Sonido
                 AudioSource.PlayClipAtPoint(sonidoHeal, transform.position, volumen);
 
-                // ❌ Destruir objeto
+                //  Destruir objeto
                 Destroy(gameObject);
             }
         }
