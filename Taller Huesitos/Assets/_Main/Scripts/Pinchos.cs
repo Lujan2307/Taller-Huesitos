@@ -1,31 +1,37 @@
 using UnityEngine;
-using System.Collections; // Necesario para usar Corrutinas
+using System.Collections;
 
 public class Pinchos : MonoBehaviour
 {
-    [SerializeField] private int daño = 0;
+    [SerializeField] private int daño = 1;
     [SerializeField] private Game_Manager gameManager;
-    
-    // Nueva variable para controlar el estado
+
+    [Header("Sonido")]
+    [SerializeField] private AudioClip sonidoDaño;
+    [SerializeField] private float volumen = 5f;
+
     private bool puedeHacerDaño = true;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && puedeHacerDaño)
         {
-            StartCoroutine(AplicarDaño());
+            StartCoroutine(AplicarDaño(collision.transform));
         }
     }
 
-    IEnumerator AplicarDaño()
+    IEnumerator AplicarDaño(Transform playerTransform)
     {
-        puedeHacerDaño = false; // Desactiva el daño temporalmente
-        
+        puedeHacerDaño = false;
+
+        // 🔊 Sonido de daño en la posición del jugador
+        AudioSource.PlayClipAtPoint(sonidoDaño, playerTransform.position, volumen);
+
+        // 💔 Aplicar daño
         gameManager.RestarVida(daño);
 
-        // Espera medio segundo antes de permitir que este pincho vuelva a hacer daño
-        yield return new WaitForSeconds(0.5f); 
-        
+        yield return new WaitForSeconds(0.5f);
+
         puedeHacerDaño = true;
     }
 }

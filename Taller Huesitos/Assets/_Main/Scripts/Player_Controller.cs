@@ -10,8 +10,15 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Game_Manager gameManager;
 
+    [Header("Visual")]
+    [SerializeField] private Transform visual; // 👈 hijo que contiene el sprite
+
     [Header("Sonido")]
     [SerializeField] private AudioSource audioPasos;
+
+    [Header("Sonido de Salto")]
+    [SerializeField] private AudioClip sonidoSalto;
+    [SerializeField] private float volumenSalto = 1.5f;
 
     [Header("Estado")]
     [SerializeField] private bool Suelo;
@@ -39,9 +46,21 @@ public class Player_Controller : MonoBehaviour
             audioPasos.Stop();
         }
 
-        // Salto
+        // 🔄 GIRAR PERSONAJE (SOLO VISUAL)
+        if (movimientoX != 0)
+{
+    Vector3 escalaActual = visual.localScale;
+
+    escalaActual.x = Mathf.Abs(escalaActual.x) * (movimientoX > 0 ? 1 : -1);
+
+    visual.localScale = escalaActual;
+}
+
+        // ⬆️ SALTO
         if (Input.GetKeyDown(KeyCode.Space) && Suelo)
         {
+            AudioSource.PlayClipAtPoint(sonidoSalto, Camera.main.transform.position, volumenSalto);
+            
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }

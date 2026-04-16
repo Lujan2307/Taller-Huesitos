@@ -3,10 +3,16 @@ using TMPro;
 
 public class Puerta : MonoBehaviour
 {
+    [Header("Referencias")]
     public Game_Manager gameManager;
     public Flores flores;
     public GameObject jugador;
     public TextMeshProUGUI textoWin;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource musicaFondo;
+    [SerializeField] private AudioClip sonidoPuerta;
+    [SerializeField] private float volumen = 2f;
 
     private bool activada = false;
 
@@ -16,13 +22,26 @@ public class Puerta : MonoBehaviour
         {
             if (!activada)
             {
+                activada = true;
+
+                // 🌸 Activar flores
                 flores.ActivarFlores();
 
-                jugador.SetActive(false); // desaparece jugador
-                Debug.Log("Activando WIN");
-                textoWin.gameObject.SetActive(true); // aparece WIN
+                // ⛔ Detener música
+                if (musicaFondo != null)
+                {
+                    musicaFondo.Stop();
+                }
 
-                activada = true;
+                // 🔊 Sonido de puerta (antes de desactivar jugador)
+                AudioSource.PlayClipAtPoint(sonidoPuerta, Camera.main.transform.position, volumen);
+
+                // 👤 Desactivar jugador
+                jugador.SetActive(false);
+
+                // 🏆 Mostrar WIN
+                Debug.Log("Activando WIN");
+                textoWin.gameObject.SetActive(true);
             }
         }
     }
