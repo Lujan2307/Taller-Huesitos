@@ -85,7 +85,7 @@ public class Game_Manager : MonoBehaviour
     public bool EstaVidaLlena()
     {
         return vida >= vidaMaxima;
-    }
+    } 
 
     // Carne sagrada
     public void ObtenerCarne()
