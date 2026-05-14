@@ -14,7 +14,7 @@ public class SpriteCharacterController : MonoBehaviour
 
     [Header("Sprite")]
     [SerializeField]
-    private Sprite _mainSprite;
+    private Sprite _tearSprite;
     [SerializeField]
     private Sprite _hairSprite;
     [SerializeField]
@@ -36,9 +36,6 @@ public class SpriteCharacterController : MonoBehaviour
     [SerializeField]
     private Sprite[] _cheekSprites;
 
-
-
-
     private void Start()
     {
 
@@ -49,6 +46,7 @@ public class SpriteCharacterController : MonoBehaviour
     {
         _spriteRenderers[6].sprite = _pupilSprites[_pupilSpriteIndex];
         _spriteRenderers[3].sprite = _mouthSprites[_mouthSpriteIndex];
+
     }
 
 
