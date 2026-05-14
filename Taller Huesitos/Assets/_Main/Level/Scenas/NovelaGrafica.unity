@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00aac4cb608ef8c41b9ef492f79c53c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texto: {fileID: 0}
+  textoResultante: {fileID: 0}
 --- !u!1 &436217384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,9 +1177,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1473040389}
   - {fileID: 39600240}
   - {fileID: 1004370553}
-  - {fileID: 1473040389}
   - {fileID: 809038777}
   - {fileID: 456203156}
   - {fileID: 940469277}
@@ -1210,7 +1210,16 @@ MonoBehaviour:
   - {fileID: 2074817604}
   - {fileID: 868923774}
   - {fileID: 460912030}
-  _pupilsSpriteIndex: 0
+  _pupilsSpriteIndex: 7
+  _mouthSpriteIndex: 8
+  _pupilSpriteIndex: 2
+  _eyebrowsSpriteIndex: 2
+  _cheekSpriteIndex: 2
+  _eyelibsSpriteIndex: 2
+  _tearSpriteIndex: 2
+  _graphicSpriteIndex: 2
+  _whiteSpriteIndex: 2
+  _hairSpriteIndex: 2
   _mainSprite: {fileID: 21300000, guid: 1f37e1c070e8faf45af2930401c2f10a, type: 3}
   _hairSprite: {fileID: 21300000, guid: 27b14de2c141cfa428137c7d5e1126a5, type: 3}
   _whiteSprite: {fileID: 21300000, guid: bc2abbddb9dfdf84fb76d90007ec02ab, type: 3}
@@ -1288,11 +1297,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f4d1374c30fb3a14eb24d963bb8d50ec, type: 3}
   _eyelibsSprites:
   - {fileID: 21300000, guid: d1c3c538443d2924dad7f96899a1898e, type: 3}
-  _pupilsSprites:
-  - {fileID: 21300000, guid: dcb9a0d2eaaf64c4198fd4406bc85f21, type: 3}
-  - {fileID: 21300000, guid: d9b4dad3e3aee91488f4d26cef266fc3, type: 3}
-  - {fileID: 21300000, guid: d7232c83391e23846824c0e5d1f54ff9, type: 3}
-  - {fileID: 21300000, guid: 31b8e0d6d62dc754cbf132364c23df22, type: 3}
+  _pupilsSprites: []
   _eyebrowsSprites:
   - {fileID: 21300000, guid: 23d8706aaf3f4504f9d5778b45174f3a, type: 3}
   - {fileID: 21300000, guid: c8d9ebf702d499c48b944bc4b32272f4, type: 3}
@@ -1312,12 +1317,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b8565bdb17af4fd4eb28f1c0bb976747, type: 3}
   - {fileID: 21300000, guid: 83470b2486488e947b7da7a9a2a3b2db, type: 3}
   - {fileID: 21300000, guid: 62b1753a190786e448a6e8ee8ade0732, type: 3}
-  _cheeksSprites:
-  - {fileID: 21300000, guid: df7829644d2f5864bb25b7557a4409c0, type: 3}
-  - {fileID: 21300000, guid: 484cb8423fa3cb349ac39fcda7100c9b, type: 3}
-  - {fileID: 21300000, guid: 8363a9ea517e00a459aba3bc514eaf0e, type: 3}
-  - {fileID: 21300000, guid: 3809738ab53bcbf4a86b635eac22cc82, type: 3}
-  - {fileID: 21300000, guid: 6351ca32b447dd8429ef04fa2afcbb09, type: 3}
+  _cheeksSprites: []
 --- !u!1 &1473040388
 GameObject:
   m_ObjectHideFlags: 0

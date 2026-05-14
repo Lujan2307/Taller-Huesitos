@@ -7,6 +7,24 @@ public class SpriteCharacterController : MonoBehaviour
     private SpriteRenderer[] _spriteRenderers;
     [SerializeField]
     private int _pupilsSpriteIndex;
+    [SerializeField]
+    private int _mouthSpriteIndex;
+    [SerializeField]
+    private int _pupilSpriteIndex;
+    [SerializeField]
+    private int _eyebrowsSpriteIndex;
+    [SerializeField]
+    private int _cheekSpriteIndex;
+    [SerializeField]
+    private int _eyelibsSpriteIndex;
+    [SerializeField]
+    private int _tearSpriteIndex;
+    [SerializeField]
+    private int _graphicSpriteIndex;
+    [SerializeField]
+    private int _whiteSpriteIndex;
+    [SerializeField]
+    private int _hairSpriteIndex;
 
     [Header("Sprite")]
     [SerializeField]
@@ -35,6 +53,14 @@ public class SpriteCharacterController : MonoBehaviour
     private void Update()
     {
         _spriteRenderers[6].sprite = _pupilsSprites[_pupilsSpriteIndex];
+        _spriteRenderers[6].sprite = _pupilsSprites[_pupilSpriteIndex];
+        _spriteRenderers[3].sprite = _mouthSprites[_mouthSpriteIndex];
+        _spriteRenderers[8].sprite = _eyebrowsSprites[_eyebrowsSpriteIndex];
+        _spriteRenderers[9].sprite = _cheeksSprites[_cheekSpriteIndex];
+        _spriteRenderers[5].sprite = _eyelibsSprites[_eyelibsSpriteIndex];
+        _spriteRenderers[2].sprite = _tearSprites[_tearSpriteIndex];
+        _spriteRenderers[4].sprite = _graphicSprites[_graphicSpriteIndex];
+        
     }
 
 }

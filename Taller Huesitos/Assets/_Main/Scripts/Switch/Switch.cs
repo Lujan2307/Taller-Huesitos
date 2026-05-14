@@ -1,13 +1,20 @@
 using UnityEngine;
 using TMPro;
 
+
+
 public class Switch : MonoBehaviour
 {
-    [SerializeField] public TextMeshProUGUI texto;
+    [SerializeField] public TextMeshProUGUI textoResultante;
 
     void Start()
     {
+
         EstadosDelJuego(3);
+    }
+    void Update()
+    {
+
     }
 
     public void EstadosDelJuego(int numero)
@@ -15,33 +22,25 @@ public class Switch : MonoBehaviour
         switch (numero)
         {
             case 0:
-                texto.text = "Me acerco con confianza… tropiezo, caigo y termino abrazándola igual.";
+                textoResultante.text = "Me inclino hacia el, lo abrazo y lo beso.";
+
                 break;
 
             case 1:
-                texto.text = "Retrocedo unos pasos, corro épicamente… y me estrello contra una pared.";
+                textoResultante.text = "Retrocedo unos pasos, tomo impulso, corro y, de una patada, lo mando a volar.";
+
                 break;
 
             case 2:
-                texto.text = "Me pongo muy nervioso, digo una bobada para romper el hielo, hago contacto visual y me desintegro.";
+                textoResultante.text = "Me pongo tímide, uwu, y echo a correr, ñya.";
+
+                break;
+
+            default:
+                textoResultante.text = "Te encontraste a tu Crush, ¿qué vas a hacer?";
+
                 break;
 
         }
-    }
-
-
-    public void Opcion0()
-    {
-        EstadosDelJuego(0);
-    }
-
-    public void Opcion1()
-    {
-        EstadosDelJuego(1);
-    }
-
-    public void Opcion2()
-    {
-        EstadosDelJuego(2);
     }
 }
