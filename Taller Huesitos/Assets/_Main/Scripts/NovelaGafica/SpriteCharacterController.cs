@@ -5,6 +5,8 @@ public class SpriteCharacterController : MonoBehaviour
     [Header("Array SpriteRenderer")]
     [SerializeField]
     private SpriteRenderer[] _spriteRenderers;
+    [SerializeField]
+    private int _pupilsSpriteIndex;
 
     [Header("Sprite")]
     [SerializeField]
@@ -29,5 +31,10 @@ public class SpriteCharacterController : MonoBehaviour
     private Sprite[] _eyebrowsSprites;
     [SerializeField]
     private Sprite[] _cheeksSprites;
+
+    private void Update()
+    {
+        _spriteRenderers[6].sprite = _pupilsSprites[_pupilsSpriteIndex];
+    }
 
 }
