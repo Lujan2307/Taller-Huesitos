@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00aac4cb608ef8c41b9ef492f79c53c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoResultante: {fileID: 0}
+  textoResultante: {fileID: 3095329865410217054}
 --- !u!1 &436217384
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +663,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1646,8 +1646,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2736693e90567043a941f5d08e4d289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  _currentNode: {fileID: 11400000, guid: 89fd961dbef72bb4f9aca699dee0085e, type: 2}
   _panelDialogo: {fileID: 3095329865410217056}
   _textDialogo: {fileID: 3095329865410217054}
+  _buttons: []
   _textButton:
   - {fileID: 3095329865410217058}
   - {fileID: 3095329865410217057}
@@ -1712,8 +1714,8 @@ Transform:
   m_GameObject: {fileID: 1185866246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.19, y: -2.2, z: 0}
+  m_LocalScale: {x: 1.297, y: 1.297, z: 1.297}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1473040389}
@@ -2149,8 +2151,8 @@ Transform:
   m_GameObject: {fileID: 1466365735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.94, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.53, y: -2.2, z: 0}
+  m_LocalScale: {x: 1.3536, y: 1.3536, z: 1.3536}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 625221227}
@@ -3090,6 +3092,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel Dialogo
       objectReference: {fileID: 0}
+    - target: {fileID: 3423577408604161714, guid: 4b52e91baae5b744c8084898faf88ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539392767461983208, guid: 4b52e91baae5b744c8084898faf88ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5164138240795585620, guid: 4b52e91baae5b744c8084898faf88ad0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -1574
@@ -3199,7 +3209,8 @@ PrefabInstance:
       value: 1801810542
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2276143892281836068, guid: 4b52e91baae5b744c8084898faf88ad0, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3438676204005301920, guid: 4b52e91baae5b744c8084898faf88ad0, type: 3}
       insertIndex: -1

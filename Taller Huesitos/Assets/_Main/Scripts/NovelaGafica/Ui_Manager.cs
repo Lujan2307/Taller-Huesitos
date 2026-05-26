@@ -1,23 +1,31 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class UI_Manager : MonoBehaviour
 {
+    [Header("Nodo de historia")]
+    [SerializeField]
+    private VisualNovelNodeSO _currentNode;
+
+    [Header("Panel de diálogo")]
     [SerializeField]
     private GameObject _panelDialogo;
+
     [SerializeField]
     private TMP_Text _textDialogo;
 
-    [Header("Text Buttons")]
+    [Header("Botones")]
+    [SerializeField]
+    private Button[] _buttons;
+
+    [Header("Textos de los botones")]
     [SerializeField]
     private TMP_Text[] _textButton;
 
-
     private void Start()
     {
-        _textDialogo.text = "Te encontraste con tu crush, que vas a hacer ?.";
-        _textButton[0].text = "Golpear";
-        _textButton[1].text = "Besar";
-        _textButton[2].text = "Correr";
+        _textDialogo.text = _currentNode.sceneText;
     }
+
 }

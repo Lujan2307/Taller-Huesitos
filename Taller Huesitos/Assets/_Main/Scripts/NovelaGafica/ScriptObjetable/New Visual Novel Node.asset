@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b75f1e5a9c67c84b84cd67d7aadf632, type: 3}
+  m_Name: New Visual Novel Node
+  m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
+  sceneText: Acabas de despertar y no sabes donde estas, que vas a hacer?
+  buttonAmount: 0
+  buttonNames:
+  - 
+  - 
+  - 
+  activateCharacterOne: 0
+  activateCharacterTwo: 0
+  backgroundSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

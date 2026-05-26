@@ -1,17 +1,27 @@
+using TMPro;
 using UnityEngine;
 
 public class Game_Manager2 : MonoBehaviour
 {
-    public void EscenaIntro(string Escena)
+    public class NewMonoBehaviourScript : MonoBehaviour
     {
-        switch (Escena)
+        [SerializeField]
+        private GameObject _panelDialogo;
+        [SerializeField]
+        private TMP_Text _textDialogo;
+
+        [Header("Text Buttons")]
+        [SerializeField]
+        private TMP_Text[] _textButton;
+
+
+        private void Start()
         {
-
-            //default
+            _textDialogo.text = "Te encontraste con tu crush, que vas a hacer ?.";
+            _textButton[0].text = "Golpear";
+            _textButton[1].text = "Besar";
+            _textButton[2].text = "Correr";
         }
-
-        
-
     }
 
 }

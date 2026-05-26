@@ -53,13 +53,13 @@ public class SpriteCharacterController : MonoBehaviour
     private void Update()
     {
         _spriteRenderers[6].sprite = _pupilsSprites[_pupilsSpriteIndex];
-        _spriteRenderers[6].sprite = _pupilsSprites[_pupilSpriteIndex];
-        _spriteRenderers[3].sprite = _mouthSprites[_mouthSpriteIndex];
-        _spriteRenderers[8].sprite = _eyebrowsSprites[_eyebrowsSpriteIndex];
-        _spriteRenderers[9].sprite = _cheeksSprites[_cheekSpriteIndex];
-        _spriteRenderers[5].sprite = _eyelibsSprites[_eyelibsSpriteIndex];
+        _spriteRenderers[2].sprite = _pupilsSprites[_pupilSpriteIndex];
+        _spriteRenderers[2].sprite = _mouthSprites[_mouthSpriteIndex];
+        _spriteRenderers[2].sprite = _eyebrowsSprites[_eyebrowsSpriteIndex];
+        _spriteRenderers[2].sprite = _cheeksSprites[_cheekSpriteIndex];
+        _spriteRenderers[2].sprite = _eyelibsSprites[_eyelibsSpriteIndex];
         _spriteRenderers[2].sprite = _tearSprites[_tearSpriteIndex];
-        _spriteRenderers[4].sprite = _graphicSprites[_graphicSpriteIndex];
+        _spriteRenderers[2].sprite = _graphicSprites[_graphicSpriteIndex];
         
     }
 
